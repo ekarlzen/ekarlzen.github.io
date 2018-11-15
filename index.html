@@ -21,10 +21,26 @@
 
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
+	
+	<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
 
   </head>
 
   <body id="page-top">
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD3mEqNR1LeGXJLf50zVN-BCe1-f8rJQ20",
+    authDomain: "cissite-32a39.firebaseapp.com",
+    databaseURL: "https://cissite-32a39.firebaseio.com",
+    projectId: "cissite-32a39",
+    storageBucket: "cissite-32a39.appspot.com",
+    messagingSenderId: "145927840366"
+  };
+  firebase.initializeApp(config);]
+  var db=firebase.firestore();
+</script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -140,10 +156,10 @@
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Subscribe to recieve emails about what I'm not doing</h2>
 
-            <form method="POST" action="https://formspree.io/ekarlzen4533@gmail.com">
+            <form id="form">
 			
 			  <input type="text" name="name" id="inputName"placeholder="Name">
-              <input type="email" name="_replyto" placeholder="Enter email address...">
+              <input type="email" name="_replyto" id="imputEmail" placeholder="Enter email address...">
               <button type="submit">Subscribe</button>
 			
             </form>
@@ -227,6 +243,8 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+	
+	<script>"js.addData.js"</script>
 
   </body>
 
